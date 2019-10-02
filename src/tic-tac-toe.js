@@ -27,9 +27,6 @@ class TicTacToe {
     }
 
     isFinished() {
-        // if (this.noMoreTurns() || this.isDraw() || this.getWinner()) {
-        //     return getWinner();
-        // }
         
         if (this.getWinner() || this.isDraw()) {
             return true;
@@ -73,7 +70,7 @@ class TicTacToe {
     }
 
     isDraw() {
-        if (this.noMoreTurns() && !this.winMark) {
+        if (this.noMoreTurns() && !this.getWinner()) {
             return true;
         }
         return false;
